@@ -20,8 +20,8 @@ const Favorite = () => {
           className="mb-4 rounded"
         />
       </div>
-      {favMemes.map((meme, index) => (
-        <Mem key={`${meme.title}-${index}`} meme={meme} />
+      {favMemes.map((meme) => (
+        <Mem key={meme.id} meme={meme} />
       ))}
     </Container>
   );

@@ -27,8 +27,8 @@ const HotPage = () => {
           className="mb-4 rounded"
         />
       </div>
-      {sortedHotMemes.map((meme, index) => (
-        <Mem key={`${meme.title}-${index}`} meme={meme} />
+      {sortedHotMemes.map((meme) => (
+        <Mem key={meme.id} meme={meme} />
       ))}
       <div className="d-flex justify-content-center mt-4">
         <Button variant="dark" onClick={() => navigate("/regular")}>

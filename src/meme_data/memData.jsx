@@ -1,7 +1,8 @@
-//Statyczna tablica memów
+//Stała baza memów
 
 const memData = [
   {
+    id: 1,
     title: "Mem 1",
     upvotes: 7,
     downvotes: 1,
@@ -9,6 +10,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 2,
     title: "Mem 2",
     upvotes: 0,
     downvotes: 0,
@@ -16,6 +18,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 3,
     title: "Mem 3",
     upvotes: 0,
     downvotes: 0,
@@ -23,6 +26,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 4,
     title: "Mem 4",
     upvotes: 0,
     downvotes: 0,
@@ -30,6 +34,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 5,
     title: "Mem 5",
     upvotes: 0,
     downvotes: 0,
@@ -37,6 +42,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 6,
     title: "Mem 6",
     upvotes: 10,
     downvotes: 0,
@@ -44,6 +50,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 7,
     title: "Mem 7",
     upvotes: 7,
     downvotes: 1,
@@ -51,6 +58,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 8,
     title: "Mem 8",
     upvotes: 0,
     downvotes: 0,
@@ -58,6 +66,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 9,
     title: "Mem 9",
     upvotes: 0,
     downvotes: 0,
@@ -65,6 +74,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 10,
     title: "Mem 10",
     upvotes: 0,
     downvotes: 0,
@@ -72,6 +82,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 11,
     title: "Mem 11",
     upvotes: 0,
     downvotes: 0,
@@ -79,6 +90,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 12,
     title: "Mem 12",
     upvotes: 10,
     downvotes: 0,
@@ -86,6 +98,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 13,
     title: "Mem 13",
     upvotes: 7,
     downvotes: 1,
@@ -93,6 +106,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 14,
     title: "Mem 14",
     upvotes: 0,
     downvotes: 0,
@@ -100,6 +114,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 15,
     title: "Mem 15",
     upvotes: 0,
     downvotes: 0,
@@ -107,6 +122,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 16,
     title: "Mem 16",
     upvotes: 0,
     downvotes: 0,
@@ -114,6 +130,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 17,
     title: "Mem 17",
     upvotes: 0,
     downvotes: 0,
@@ -121,6 +138,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 18,
     title: "Mem 18",
     upvotes: 10,
     downvotes: 0,
@@ -128,6 +146,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 19,
     title: "Mem 19",
     upvotes: 7,
     downvotes: 1,
@@ -135,6 +154,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 20,
     title: "Mem 20",
     upvotes: 0,
     downvotes: 0,
@@ -142,6 +162,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 21,
     title: "Mem 21",
     upvotes: 0,
     downvotes: 0,
@@ -149,6 +170,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 22,
     title: "Mem 22",
     upvotes: 0,
     downvotes: 0,
@@ -156,6 +178,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 23,
     title: "Mem 23",
     upvotes: 10,
     downvotes: 0,
@@ -163,6 +186,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 24,
     title: "Mem 24",
     upvotes: 7,
     downvotes: 1,
@@ -170,6 +194,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 25,
     title: "Mem 25",
     upvotes: 0,
     downvotes: 0,
@@ -177,6 +202,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 26,
     title: "Mem 26",
     upvotes: 0,
     downvotes: 0,
@@ -184,6 +210,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 27,
     title: "Mem 27",
     upvotes: 0,
     downvotes: 0,
@@ -191,6 +218,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 28,
     title: "Mem 28",
     upvotes: 0,
     downvotes: 0,
@@ -198,6 +226,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 29,
     title: "Mem 29",
     upvotes: 0,
     downvotes: 0,
@@ -205,6 +234,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 30,
     title: "Mem 30",
     upvotes: 10,
     downvotes: 0,
@@ -212,6 +242,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 31,
     title: "Mem 31",
     upvotes: 0,
     downvotes: 0,
@@ -219,6 +250,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 32,
     title: "Mem 32",
     upvotes: 0,
     downvotes: 0,
@@ -226,6 +258,7 @@ const memData = [
     favorite: false,
   },
   {
+    id: 33,
     title: "Mem 33",
     upvotes: 10,
     downvotes: 0,

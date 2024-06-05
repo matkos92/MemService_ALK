@@ -10,28 +10,26 @@ export const MemProvider = ({ children }) => {
   const [preview, setPreview] = useState(false); //stan dla warunkowego renderu podglądu mema
   const [fileAdded, setFileAdded] = useState(false); //stan dla warunkowego renderu info dla użytkownika o dodanym pliku
 
-  //Tytuły w bazie memów muszą być unikalne, dla nowo dodanego mema generowany jest unikalny tytuł
-  
-  const handleUpvote = (title) => {
+  const handleUpvote = (id) => {
     setMemes((prevMemes) =>
       prevMemes.map((meme) =>
-        meme.title === title ? { ...meme, upvotes: meme.upvotes + 1 } : meme
+        meme.id === id ? { ...meme, upvotes: meme.upvotes + 1 } : meme
       )
     );
   };
 
-  const handleDownvote = (title) => {
+  const handleDownvote = (id) => {
     setMemes((prevMemes) =>
       prevMemes.map((meme) =>
-        meme.title === title ? { ...meme, downvotes: meme.downvotes + 1 } : meme
+        meme.id === id ? { ...meme, downvotes: meme.downvotes + 1 } : meme
       )
     );
   };
 
-  const handleToggleFavorite = (title) => {
+  const handleToggleFavorite = (id) => {
     setMemes((prevMemes) =>
       prevMemes.map((meme) =>
-        meme.title === title ? { ...meme, favorite: !meme.favorite } : meme
+        meme.id === id ? { ...meme, favorite: !meme.favorite } : meme
       )
     );
   };
@@ -58,11 +56,11 @@ export const MemProvider = ({ children }) => {
       return;
     } else {
       let title = file.name.split(".")[0]; //ustawienie nazwy pliku jako tytułu mema ucinając rozszerzenie
-      title += Math.random().toString(36).slice(2); //dodanie losowego ciągu znaków do tytułu
 
       const imgURL = URL.createObjectURL(file); //tworzenie tymczasowego URL dla dodania mema
 
       const newMeme = {
+        id: Date.now(), //unikalny identyfikator
         title: title,
         upvotes: 0,
         downvotes: 0,
@@ -74,6 +72,7 @@ export const MemProvider = ({ children }) => {
       fileRef.current.value = "";
       setPreview(false);
       setFileAdded(true); //wyświetlanie info o dodanym pliku
+      console.log(newMeme);
     }
   };
 
