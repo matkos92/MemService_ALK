@@ -1,15 +1,13 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { MemProvider } from "./components/MemContext";
-import HomePage from "./pages/HomePage";
-import HotPage from "./pages/HotPage";
 import AddMemeForm from "./pages/AddMemeForm";
 import { Navigation } from "./components/Navigation";
 import ErrorPage from "./pages/ErrorPage";
-import Favorite from "./pages/Favorite";
 import ScrollToTop from "./components/ScrollToTop";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import MemePage from "./pages/MemePage";
 
 function App() {
   return (
@@ -20,9 +18,9 @@ function App() {
         <Container>
           <Routes>
             <Route path="/" element={<Navigate to="/regular" />} />
-            <Route path="/regular" element={<HomePage />} />
-            <Route path="/hot" element={<HotPage />} />
-            <Route path="/favorite" element={<Favorite />} />
+            <Route path="/regular" element={<MemePage type="regular" />} />
+            <Route path="/hot" element={<MemePage type="hot" />} />
+            <Route path="/favorite" element={<MemePage type="favorite" />} />
             <Route path="/addMeme" element={<AddMemeForm />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

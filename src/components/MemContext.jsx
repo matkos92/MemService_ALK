@@ -1,4 +1,4 @@
-//Komponent zawierający główny stan aplikacji i logike formularza do dodawania mema
+//Komponent zawierający logikę aplikacji i formularza do dodawania mema
 
 import React, { createContext, useState, useRef } from "react";
 import memData from "../meme_data/memData";
@@ -6,9 +6,10 @@ import memData from "../meme_data/memData";
 const MemContext = createContext();
 
 export const MemProvider = ({ children }) => {
-  const [memes, setMemes] = useState(memData); //główny stan aplikacji
+  const [memes, setMemes] = useState(memData); //główny stan aplikacji dla obiektu mema
   const [preview, setPreview] = useState(false); //stan dla warunkowego renderu podglądu mema
   const [fileAdded, setFileAdded] = useState(false); //stan dla warunkowego renderu info dla użytkownika o dodanym pliku
+  const fileRef = useRef(); //zmienna referencyjna do formularza dodawania mema (type="file")
 
   const handleUpvote = (id) => {
     setMemes((prevMemes) =>
@@ -26,7 +27,7 @@ export const MemProvider = ({ children }) => {
     );
   };
 
-  const handleToggleFavorite = (id) => {
+  const handleFavorite = (id) => {
     setMemes((prevMemes) =>
       prevMemes.map((meme) =>
         meme.id === id ? { ...meme, favorite: !meme.favorite } : meme
@@ -34,10 +35,18 @@ export const MemProvider = ({ children }) => {
     );
   };
 
-  //Obsługa dodawania mema w formularzu AddMemeForm
-  //oraz warunkowego renderowania podglądu i informacji dla użytkownika o dadanym pliku
-  const fileRef = useRef();
+  //Filtrowanie memów do route '/hot' według wzoru (upvote - downvote > 5)
+  const hotMemes = memes.filter((meme) => meme.upvotes - meme.downvotes > 5);
 
+  //Sortowanie '/hot' po ilości upvotes
+  const sortedHotMemes = [...hotMemes].sort(
+    (a, b) => b.upvotes - b.downvotes - (a.upvotes - a.downvotes)
+  );
+
+  //Filtrowanie memów do route '/favorite'
+  const favMemes = memes.filter((meme) => meme.favorite === true);
+
+  //Logika formularza do dodawania mema
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -84,10 +93,12 @@ export const MemProvider = ({ children }) => {
         handleDownvote,
         fileRef,
         handleSubmit,
-        handleToggleFavorite,
+        handleFavorite,
         preview,
         fileAdded,
         handleFileChange,
+        sortedHotMemes,
+        favMemes,
       }}
     >
       {children}

@@ -1,4 +1,4 @@
-//Komponent wyświetlający obiekt mema
+//Komponent wyświetlający mema oraz przyciski do głosowania
 
 import React, { useContext } from "react";
 import { Card, Button, Image, Row, Col, Container } from "react-bootstrap";
@@ -11,7 +11,7 @@ import {
 import MemContext from "../components/MemContext";
 
 const Mem = ({ meme }) => {
-  const { handleUpvote, handleDownvote, handleToggleFavorite } =
+  const { handleUpvote, handleDownvote, handleFavorite } =
     useContext(MemContext);
 
   return (
@@ -40,7 +40,7 @@ const Mem = ({ meme }) => {
               <Col className="px-0 mx-md-0 pt-2">
                 <Button
                   variant={meme.favorite ? "warning" : "secondary"}
-                  onClick={() => handleToggleFavorite(meme.id)}
+                  onClick={() => handleFavorite(meme.id)}
                 >
                   {meme.favorite ? <StarFill /> : <Star />}
                 </Button>
