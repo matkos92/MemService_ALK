@@ -16,19 +16,19 @@ export const Navigation = () => {
           className="text-center justify-content-lg-start"
         >
           <Nav className="me-auto">
-            <NavLink to="/regular" className="nav-link  mx-2 my-1">
+            <NavLink to="/regular" className="nav-link ">
               Regular
             </NavLink>
 
-            <NavLink to="/hot" className="nav-link mx-2 my-1">
+            <NavLink to="/hot" className="nav-link">
               Hot
             </NavLink>
 
-            <NavLink to="/favorite" className="nav-link mx-2 my-1">
+            <NavLink to="/favorite" className="nav-link">
               Favorite
             </NavLink>
 
-            <NavLink to="/addMeme" className="nav-link mx-2 my-1">
+            <NavLink to="/addMeme" className="nav-link">
               Add Meme
             </NavLink>
           </Nav>

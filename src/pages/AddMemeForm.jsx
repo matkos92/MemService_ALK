@@ -11,7 +11,7 @@ export default function AddMemeForm() {
   return (
     <Container className="text-center my-4">
       <div className="mb-4">
-        <Image src="/images/Add.png" alt="logo add your meme" fluid />
+        <Image src="/images/Add.png" alt="logo add your meme" fluid className="mb-4 rounded" />
       </div>
       {preview && (
         <Image
@@ -22,7 +22,7 @@ export default function AddMemeForm() {
             maxWidth: "300px",
             maxHeight: "300px",
             marginBottom: "20px",
-          }}
+          }} 
         />
       )}
       {fileAdded && <h2 className="text-light">File added successfully!</h2>}

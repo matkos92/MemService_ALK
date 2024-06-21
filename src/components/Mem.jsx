@@ -16,7 +16,7 @@ const Mem = ({ meme }) => {
 
   return (
     <Container className="d-flex justify-content-center mb-4 ">
-      <Card className="bg-dark text-white w-50 ">
+      <Card className="bg-dark text-white card-custom">
         <Card.Body className="text-center">
           <Image src={meme.img} alt={meme.id} fluid className="mb-3" />
           <Row className="justify-content-center align-items-center">
