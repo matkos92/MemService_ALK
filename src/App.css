@@ -11,7 +11,7 @@ body {
 /* Reguły media dla komponentu <Card/> w 'Mem.jsx' */
 @media (max-width: 576px) {
   .card-custom {
-    width: 90% !important;
+    width: 100% !important;
   }
 }
 
