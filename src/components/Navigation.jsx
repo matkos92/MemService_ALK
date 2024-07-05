@@ -1,4 +1,4 @@
-//Komponent wyświetlający pasek nawigacji
+//Component displaying the navigation bar
 
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";

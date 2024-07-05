@@ -1,4 +1,4 @@
-//Komponent renderujący wybraną stronę z memami na podstawie otrzymanego propsa
+//Component rendering the selected page of memes (based on received props)
 
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";

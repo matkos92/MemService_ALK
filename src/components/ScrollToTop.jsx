@@ -1,4 +1,4 @@
-//Komponent przesuwający pasek przeglądania na górę podczas zmiany route
+//Component that scrolls the browsing bar to the top when the route changes
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";

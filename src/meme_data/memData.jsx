@@ -1,4 +1,4 @@
-//Stała baza memów
+//Constant meme database
 
 const memData = [
   {

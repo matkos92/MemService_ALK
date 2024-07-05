@@ -2,6 +2,12 @@
 
 MemService is a responsive frontend web application for browsing, upvoting, downvoting, and adding memes. The project is built using React, React Bootstrap, and React Router for the frontend, ensuring a smooth and intuitive user experience across various devices.
 
+## Hosting
+
+This application is hosted on Netlify and can be accessed at the following URL:
+
+https://charming-phoenix-c1f832.netlify.app
+
 ## Installation
 
 To set up the project locally, follow these steps:

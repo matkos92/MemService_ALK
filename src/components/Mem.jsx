@@ -1,4 +1,4 @@
-//Komponent wyświetlający mema oraz przyciski do głosowania
+//Component displaying a meme and buttons
 
 import React, { useContext } from "react";
 import { Card, Button, Image, Row, Col, Container } from "react-bootstrap";

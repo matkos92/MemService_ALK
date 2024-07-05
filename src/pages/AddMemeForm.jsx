@@ -1,4 +1,4 @@
-//Komponent z formularzem do dodawania mema
+//Component with a form for adding a meme
 
 import React, { useContext } from "react";
 import MemContext from "../components/MemContext";

@@ -8,7 +8,7 @@ body {
   border-radius: 5px;
 }
 
-/* Reguły media dla komponentu <Card/> w 'Mem.jsx' */
+/* Media rules for the <Card/> component in 'Mem.jsx' */
 @media (max-width: 576px) {
   .card-custom {
     width: 100% !important;
@@ -27,7 +27,7 @@ body {
   }
 }
 
-/* Style dla komponentu <NavLink/> w 'Navigation.jsx' */  
+/* Styles for the <NavLink/> component in 'Navigation.jsx' */ 
 .nav-link{
   margin-left: 0.5rem;
   margin-right: 0.5rem;

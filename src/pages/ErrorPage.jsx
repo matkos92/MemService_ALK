@@ -1,4 +1,4 @@
-//Komponent wyświetlający error page
+//Component displaying the error page
 
 import { Container, Image, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
